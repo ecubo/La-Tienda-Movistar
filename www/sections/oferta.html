@@ -1,0 +1,44 @@
+<link href="sections/css/landings.css" rel="stylesheet" type="text/css"/>
+<link href="sections/css/oferta.css" rel="stylesheet" type="text/css"/>
+
+<div class="content landing oferta">
+
+
+<!-- 	<a href="javascript:void(0)" class="icon shotShare">c</a> -->
+</div>
+
+<script>
+
+$('main#oferta .content').css({'margin-left':'100%'});
+setTimeout(function(){
+	$('main#oferta .content').animate({'margin-left':'0'},300,'linear');
+}, 700);
+
+// BOTON COMPARTIR
+// $('.content').on('touchstart', '.shotShare', function(){
+
+// 	navigator.screenshot.save(function(error,res){
+// 	  if(error){
+
+//             navigator.notification.confirm(
+//                 'No ha sido posible compartir el contenido. Inténtalo de nuevo más tarde', // message
+//                 errorCapture,            // callback to invoke with index of button pressed
+//                 'Error',           // title
+//                 ['OK']     // buttonLabels
+//             );
+//             function errorCapture() {
+//             	//
+//             };
+
+// 	  }else{
+// 	    var caption = 'Samsung Galaxy S4';
+// 	    var message = 'Todo sobre el Samsung Galaxy S4 en La Tienda de Movistar';
+// 	    var picture = res.filePath;
+// 	    var link = 'http://goo.gl/n3B6d1';
+
+// 	    window.plugins.socialsharing.share(message, caption, picture, link);
+// 	  }
+// 	},'jpg',60,'ofertaMovistar');
+// });
+
+</script>

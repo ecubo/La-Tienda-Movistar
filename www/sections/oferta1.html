@@ -1,0 +1,1035 @@
+<style>
+/*ICONOS*/
+@font-face{font-family:'Movistar Caracteristicas';src:url('sections/fonts/Movistar-Ico.ttf') format('truetype'),url('sections/fonts/Movistar-Ico.svg#movistar_textitalic') format('svg');font-weight:normal;font-style:normal;}
+
+.caracteristicas {
+	font-family: 'Movistar Caracteristicas';
+	color: rgb(127,127,127);
+}
+
+.oferta1 label[for="selectMarcas"] {
+	position: absolute;
+	right: 16px;
+	-webkit-transform: rotate(-90deg);
+	top: 68px;
+}
+
+.oferta1 label[for="selectModelos"] {
+	position: absolute;
+	right: 16px;
+	-webkit-transform: rotate(-90deg);
+	top: 128px;
+}
+
+.caracteristicas li {
+	width: 25%;
+	height: 80px;
+	float: left;
+	text-align: center;
+	position: relative;
+	line-height: 80px;
+	font-size: 16px;
+}
+
+.caracteristicas li:nth-child(5) {
+	margin-left: 25%;
+}
+
+.caracteristicas li:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+	font-size: 60px;
+}
+
+.caracteristicas li.icon-Camara {
+	padding-top: 2px;
+	font-size: 12px;
+}
+
+
+.icon-Pantalla:before {
+content: "\e613";
+}
+.icon-Camara:before {
+content: "\e614";
+}
+.icon-Procesador2x:before {
+	content: "\e616";
+}
+.icon-Procesador4x:before {
+	content: "\e617";
+}
+.icon-Procesador8x:before {
+	content: "\e620";
+}
+.icon-Memoria4GB:before {
+	content: "\e618";
+}
+.icon-Memoria8GB:before {
+	content: "\e619";
+}
+.icon-Memoria16GB:before {
+	content: "\e61a";
+}
+.icon-Memoria32GB:before {
+	content: "\e61b";
+}
+.icon-Memoria64GB:before {
+	content: "\e61d";
+}
+.icon-Memoria128GB:before {
+	content: "\e61e";
+}
+.icon-wifi:before {
+content: "\e61f";
+}
+.icon-hd:before {
+content: "h";
+}
+
+select {
+	display: block;
+	width: 50%;
+	height: 44px;
+	font-family: 'Movistar Headline';
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #005c84;
+	margin-bottom: 10px;
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding-left: 12px;
+	float: left;
+	border: 0;
+}
+
+select#selectMarcas,
+select#selectModelos,
+select#selectMarcasComparador,
+select#selectModelosComparador {
+	width: 100%;
+	border: 0;
+	height: 50px;
+	font-size: 16px;
+}
+
+#terminal {
+	position: absolute;
+	width: 100%;
+	height: 45%;
+	top: 185px;
+	left: 0;
+	overflow: hidden;
+	padding: 15px;
+}
+
+#terminal .flexslider {
+	height: 100%;
+/*	overflow: hidden;*/
+}
+
+#terminal .flexslider > h3 {
+font-weight: normal;
+font-family: 'Movistar Headline';
+text-align: center;
+line-height: 1.5em;
+font-size: 1.1em;
+color: rgb(0,92,132);
+padding-top: 1em;
+}
+
+#terminal .flexslider .flex-viewport,
+#terminal .flexslider .slides,
+#terminal .flexslider .slides > li {
+	height: 100%;
+	overflow: hidden;
+}
+
+#terminal .flexslider .slides > li {
+	position: relative;
+}
+
+#terminal .flexslider .slides > li.precios,
+#terminal .flexslider .slides > li.ofertas,
+.contentComparador .flexslider .slides > li.precios {
+	font-family: 'Movistar Headline';
+	color: rgb(0,92,132);
+	padding-left: 15px;
+}
+
+.contentComparador .flexslider .slides > li.precios div {
+	padding-left: 5px;
+}
+
+h3.precioMinimo,
+h3.novedad  {
+	color: #fff;
+	font-family: 'Movistar Headline';
+	font-weight: normal;
+	font-size: 12px;
+	padding: 6px;
+	line-height: 1em;
+	position: relative;
+}
+
+h3.precioMinimo {
+	width: 30%;
+	background-color: rgb(226,183,43);
+}
+
+h3.novedad {
+	width: 24%;
+	background-color: rgb(122,184,0);
+}
+
+h3.precioMinimo:after,
+h3.novedad:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	top: 4px;
+	right: -8px;
+}
+
+h3.precioMinimo:after {
+	border-left: 8px solid rgb(226,183,43);
+}
+
+h3.novedad:after {
+	border-left: 8px solid rgb(122,184,0);
+}
+
+
+#terminal .flexslider .slides > li.precios h3 {
+	font-size: 20px;
+}
+
+.contentComparador .flexslider .slides > li.precios h3 {
+	font-size: .65em;
+}
+
+#terminal .flexslider .slides > li.precios h4,
+#terminal .flexslider .slides > li.precios p {
+	font-size: 16px;
+}
+
+.contentComparador .flexslider .slides > li.precios h4,
+.contentComparador .flexslider .slides > li.precios p {
+	font-size: .6em;
+}
+
+#terminal .flexslider .slides > li.precios p,
+.contentComparador .flexslider .slides > li.precios p {
+	line-height: 1em;
+	margin-left: .5em;
+	font-weight: bold;
+}
+
+#terminal .flexslider .slides > li.precios p span,
+.contentComparador .flexslider .slides > li.precios p span {
+	font-weight: normal;
+}
+
+#terminal .flexslider .slides > li.precios h3,
+#terminal .flexslider .slides > li.ofertas h3,
+#terminal .flexslider .slides > li.precios h4,
+#terminal .flexslider .slides > li.ofertas h4,
+#terminal .flexslider .slides > li.precios h5,
+#terminal .flexslider .slides > li.ofertas h5,
+.contentComparador .flexslider .slides > li.precios h3,
+.contentComparador .flexslider .slides > li.precios h4,
+.contentComparador .flexslider .slides > li.precios h5 {
+	font-weight: normal;
+	line-height: 1.2em;
+	margin-top: .2em;
+}
+
+.contentComparador .flexslider .slides > li.precios h5 {
+	font-size: .65em;
+}
+
+.contentComparador .flexslider .slides > li.precios h3 {
+	margin-top: .5em;
+}
+
+#terminal .flexslider .slides > li.ofertas h4,
+#terminal .flexslider .slides > li.precios h4,
+.contentComparador .flexslider .slides > li.precios h4 {
+	font-weight: bold;
+}
+
+#terminal .flexslider .slides > li.precios h3:first-child {
+	margin-top: 0;
+}
+
+#terminal .flexslider .slides > li.precios h3 span,
+#terminal .flexslider .slides > li.ofertas h3 span,
+#terminal .flexslider .slides > li.precios h4 span,
+#terminal .flexslider .slides > li.ofertas h4 span,
+#terminal .flexslider .slides > li.precios h5 span,
+#terminal .flexslider .slides > li.ofertas h5 span,
+.contentComparador .flexslider .slides > li.precios h3 span,
+.contentComparador .flexslider .slides > li.precios h4 span,
+.contentComparador .flexslider .slides > li.precios h5 span {
+	font-weight: bold;
+}
+
+.contentComparador .flexslider .slides > li.precios h5 span {
+	font-size: .65em;
+}
+
+#terminal .flexslider .slides > li.ofertas h3 span {
+	clear: both;
+	display: block;
+}
+
+#terminal .flexslider img {
+	height: 80%;
+	width: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+#terminal .flexslider li.so img,
+#terminal .flexslider li.cuatrog img {
+	width: auto;
+	height: 70px;
+	padding-top: 8px;
+}
+
+a.icon.shotShare,
+a.icon.comparador {
+	color: rgb(0,92,132);
+	height: 50px;
+	position: absolute;
+	bottom: 55px;
+	left: 5px;
+	display: none;
+}
+
+#ios a.icon.shotShare {
+	text-transform: uppercase;
+}
+
+#ios a.icon.shotShare:after {
+	text-transform: none;
+}
+
+a.icon.comparador {
+	left: auto;
+	right: 95px;
+}
+
+a.icon.shotShare:after {
+	content: "Compártelo";
+	font-family: 'Movistar Text';
+	font-size: 16px;
+	position: absolute;
+}
+
+a.icon.comparador:after {
+	content: "Comparador";
+	font-family: 'Movistar Text';
+	font-size: 16px;
+	position: absolute;
+}
+
+
+
+#terminal .flex-control-nav {
+	top: auto !important;
+	bottom: -15px !important;
+}
+
+.oferta1 .flex-control-paging li a {
+	background: rgba(0,92,132,.4);
+}
+
+.oferta1 .flex-control-paging li a.flex-active {
+	background: rgba(0,92,132,.9);
+}
+
+#comparador {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 50px 15px;
+	background-color: #fff;
+	display: none;
+}
+
+#comparador a.icon.close {
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: rgb(0,92,132);
+}
+
+#comparador h2 {
+	text-align: center;
+	font-family: 'Movistar Headline';
+	font-weight: normal;
+	font-size: 16px;
+	color: rgb(0,92,132);
+	line-height: 1em;
+}
+
+#comparador h2 span {
+	font-family: 'Movistar Market';
+	clear: both;
+	display: block;
+	font-size: 1.3em;
+	margin-top: 6px;
+}
+
+.contentComparador {
+	width: 100%;
+	height: 46%;
+	margin-top: 10px;
+}
+
+.contentComparador .flexslider,
+.contentComparador .flexslider .flex-viewport {
+	width: 100%;
+	height: 100%;
+}
+
+.contentComparador .flexslider .slides,
+.contentComparador .flexslider .slides > li {
+	height: 100%;
+}
+
+.contentComparador .flexslider .slides > li div {
+	width: 50%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.contentComparador .flexslider .slides > li div.terminal1 {
+	border-right: 1px solid rgb(0,92,132);
+}
+
+.contentComparador .flexslider .slides > li div img {
+width: auto;
+height: 100%;
+margin-left: 50%;
+transform: translate(-50%,0);
+-webkit-transform: translate(-50%,0);
+}
+
+.contentComparador .flexslider .slides > li div img.ancho {
+	width: 90%;
+	height: auto;
+	margin-left: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	margin-top: 65%;
+}
+
+.contentComparador .flexslider .slides > li div .so img {
+	margin-top: 10px;
+}
+
+.contentComparador .caracteristicas {
+	height: 100%;
+	margin-top: -8px;
+}
+
+.contentComparador .caracteristicas li {
+	width: 50%;
+	height: 33.1%;
+	margin-left: 0 !important;
+}
+
+.contentComparador .flex-control-nav {
+	top: auto !important;
+	bottom: -36px !important;
+}
+
+
+</style>
+
+<div class="content landing oferta1">
+
+	<select name="selectDispositivos" id="selectDispositivos" style="border-right:2px solid #fff;">
+		<option value="0" disabled="disabled" selected="selected">¿Qué busco?</option>
+	    <option value="1" data-dispositivo="smartphone">Smartphone</option>
+	    <option value="2" data-dispositivo="tablet">Tablet</option>
+	    <option value="3" data-dispositivo="tv">Smart TV</option>
+	</select>
+
+<!-- 	<select id="selectOferta">
+	    <option value="0" disabled selected>¿Cómo lo quieres?</option>
+	    <option value="1">Con contrato</option>
+	    <option value="2">Con contrato y A Plazos</option>
+	    <option value="3">Con Tarjeta</option>
+	    <option value="4">Libre</option>
+	</select> -->
+
+	<select id="selectPrecios" style="border-left:2px solid #fff;">
+	    <option value="9999" disabled="disabled" selected="selected">¿Cuánto quiero gastar?</option>
+	    <option value="100">Menos de 100€</option>
+	    <option value="175">Menos de 175€</option>
+	    <option value="350">Menos de 350€</option>
+	    <option value="9999">Cualquier precio</option>
+	</select>
+
+<!-- 	<label for="selectMarcas"><a href="javascript:void(0)" class="icon">b</a></label> -->
+	<select id="selectMarcas" name="selectMarcas">
+	    <option value="0" disabled="disabled" selected="selected">Marca</option>
+	    <option value="1" data-marca="alcatel">Alcatel</option>
+	    <option value="2" data-marca="apple">Apple</option>
+	    <option value="3" data-marca="huawei">Huawei</option>
+	    <option value="4" data-marca="lg">LG</option>
+	    <option value="5" data-marca="nokia">Nokia</option>
+	    <option value="6" data-marca="samsung">Samsung</option>
+	    <option value="7" data-marca="sony">Sony</option>
+	</select>
+
+<!-- 	<label for="selectModelos"><a href="javascript:void(0)" class="icon">b</a></label> -->
+	<select id="selectModelos" name="selectModelos">
+	</select>
+
+	<div id="terminal">
+		<div class="flexslider">
+			<h3><strong>Libres</strong>, con contrato o tarjeta.<br/>Tú decides.</h3>
+		</div>
+	</div>
+
+	<a href="javascript:shareContent()" class="icon shotShare">c</a>
+	<a href="javascript:shareContent()" class="icon comparador">-</a>
+
+	<div id="comparador">
+		<a href="javascript:void(0)" class="icon close">x</a>
+
+		<select id="selectMarcasComparador" name="selectMarcasComparador">
+		</select>
+		<select id="selectModelosComparador" name="selectModelosComparador">
+		</select>
+
+		<h2></h2>
+	</div>
+
+
+	<div class="maskSlider"></div>
+
+</div>
+
+
+<script>
+
+$('.oferta1 select').on('touchstart', function(e) {
+	e.stopPropagation();
+});
+
+$('.oferta1 select').on('focus blur', function() {
+	window.scrollTo(0,0);
+});
+
+$('#selectMarcas,#selectPrecios,#selectDispositivos').change(function () {
+    resetModelos();
+});
+
+
+$('#selectModelos').change(function () {
+    var modelo = $( "#selectModelos option:selected" ).text();
+    var img = 'sections/images/oferta/'+$( "#selectModelos option:selected" ).attr('data-model')+'.png';
+
+	$('#terminal .flexslider').remove();
+	$('#terminal').html('<div class="flexslider"><ul class="slides"><li class="landingTerminal"><img src="'+img+'" alt=""></li><li><ul class="caracteristicas"><li class="icon-Pantalla">'+$( "#selectModelos option:selected" ).attr('data-pantalla')+'"</li><li class="icon-Camara">'+$( "#selectModelos option:selected" ).attr('data-camara')+'</li><li class="icon-Memoria icon-Memoria'+$( "#selectModelos option:selected" ).attr('data-memoria')+'GB">&nbsp;</li><li class="icon-Procesador icon-Procesador'+$( "#selectModelos option:selected" ).attr('data-procesador')+'x">&nbsp;</li><li class="icon-wifi">&nbsp;</li><li class="icon-hd">&nbsp;</li></ul></li><li class="precios"></li><li class="ofertas"></li></ul></div>');
+
+	if ($( "#selectModelos option:selected" ).attr('data-precioMinimo') == "true") {
+		$('.landingTerminal').append('<h3 class="precioMinimo">¡Precio Mínimo Garantizado!</h3>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-novedad') == "true") {
+		$('.landingTerminal').append('<h3 class="novedad">Novedad</h3>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-pantalla') == 'undefined') {
+		$('.icon-Pantalla').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-camara') == 'undefined') {
+		$('.icon-Camara').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-memoria') == 'undefined') {
+		$('.icon-Memoria').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-procesador') == 'undefined') {
+		$('.icon-Procesador').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-wifi') != 'true') {
+		$('.icon-wifi').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-hd') != 'true') {
+		$('.icon-hd').remove();
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'ios8') {
+		$('.caracteristicas').append('<li class="icon-ios8 so"><img src="sections/images/oferta/ios8.png" alt=""></li>')
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'android') {
+		$('.caracteristicas').append('<li class="icon-android so"><img src="sections/images/oferta/iconAndroid.png" alt=""></li>')
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'windows') {
+		$('.caracteristicas').append('<li class="icon-windows so"><img src="sections/images/oferta/iconWindows.png" alt=""></li>')
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'firefox') {
+		$('.caracteristicas').append('<li class="icon-firefox so"><img src="sections/images/oferta/iconFirefox.png" alt=""></li>')
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-cuatrog') == 'true') {
+		$('.caracteristicas').append('<li class="cuatrog"><img src="sections/images/oferta/icon4G.png" alt=""></li>')
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-contrato') != 'undefined') {
+		$('.precios').append('<h3>P.V.P. Contrato: <span>'+$( "#selectModelos option:selected" ).attr('data-contrato')+'€</span></h3>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-cuota30') != 'undefined' && $( "#selectModelos option:selected" ).attr('data-cuota24') != 'undefined') {
+		$('.precios').append('<h4>A plazos y sin intereses:</h4><p><span>24 cuotas: </span>'+$( "#selectModelos option:selected" ).attr('data-cuota24')+'€</p><p><span>30 cuotas: </span>'+$( "#selectModelos option:selected" ).attr('data-cuota30')+'€</p>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-cuota24') != 'undefined' && $( "#selectModelos option:selected" ).attr('data-cuota30') == 'undefined') {
+		$('.precios').append('<h4>A plazos y sin intereses:</h4><p><span>24 cuotas: </span>'+$( "#selectModelos option:selected" ).attr('data-cuota24')+'€</p>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-cuota30') != 'undefined' && $( "#selectModelos option:selected" ).attr('data-cuota24') == 'undefined') {
+		$('.precios').append('<h4>A plazos y sin intereses:</h4><p><span>30 cuotas: </span>'+$( "#selectModelos option:selected" ).attr('data-cuota30')+'€</p>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-tarjeta') != 'undefined') {
+		$('.precios').append('<h3>P.V.P. Tarjeta: <span>'+$( "#selectModelos option:selected" ).attr('data-tarjeta')+'€</span></h3>');
+		if ($( "#selectModelos option:selected" ).attr('data-recargando') != 'undefined') {
+			$('.precios').append('<h4>Recargando:</h4><p><span>'+$( "#selectModelos option:selected" ).attr('data-recargando')+'€</span></p>');
+		}
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-libre') != 'undefined') {
+		$('.precios').append('<h3>P.V.P. Libre: <span>'+$( "#selectModelos option:selected" ).attr('data-libre')+'€</span></h3>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-seguro') != 'undefined') {
+		$('.precios').append('<h5>Seguro Móvil: <span>'+$( "#selectModelos option:selected" ).attr('data-seguro')+'€</span></h5>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-oferta') != 'true') {
+		$('.ofertas').remove();
+	}
+	else {
+		if ($( "#selectModelos option:selected" ).attr('data-renueva') != 'undefined') {
+			$('.ofertas').append('<h3>Renueva y Recicla:<span> '+$( "#selectModelos option:selected" ).attr('data-renueva')+'€ de dto.</span></h3>');
+		}
+		if ($( "#selectModelos option:selected" ).attr('data-descuento') != 'undefined') {
+			$('.ofertas').append('<h3>'+$( "#selectModelos option:selected" ).attr('data-descuento')+'</h3>');
+		}
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-combinada') != 'undefined') {
+		$('.slides').append('<li class="combinada"><img style="height: auto; width: 100%;" src="sections/images/oferta/'+$( "#selectModelos option:selected" ).attr('data-combinada')+'.jpg" alt=""></li>')
+	}
+
+	flex();
+    $('a.icon.shotShare, a.icon.comparador').fadeIn();
+
+});
+
+$('#selectModelosComparador').change(function () {
+	setModelsComparador();
+});
+
+function setModelsComparador() {
+	var modelo1 = $( "#selectModelos option:selected" ).text();
+	var modelo2 = $( "#selectModelosComparador option:selected" ).text();
+
+	var img1 = 'sections/images/oferta/'+$( "#selectModelos option:selected" ).attr('data-model')+'.png';
+	var img2 = 'sections/images/oferta/'+$( "#selectModelosComparador option:selected" ).attr('data-model')+'.png';
+
+	$('#comparador h2').html(modelo1 + '<span> vs </span>' + modelo2);
+
+	$('.oferta1 .contentComparador').remove();
+
+	$('#comparador').append('<div class="contentComparador"><div class="flexslider"><ul class="slides"><li class="landingTerminal"><div class="terminal1"><img src="'+img1+'" alt=""></div><div class="terminal2"><img src="'+img2+'" alt=""></div></li><li><div class="terminal1"><ul class="caracteristicas"><li class="icon-Pantalla">'+$( "#selectModelos option:selected" ).attr('data-pantalla')+'"</li><li class="icon-Camara">'+$( "#selectModelos option:selected" ).attr('data-camara')+'</li><li class="icon-Memoria icon-Memoria'+$( "#selectModelos option:selected" ).attr('data-memoria')+'GB">&nbsp;</li><li class="icon-Procesador icon-Procesador'+$( "#selectModelos option:selected" ).attr('data-procesador')+'x">&nbsp;</li></ul></div><div class="terminal2"><ul class="caracteristicas"><li class="icon-Pantalla">'+$( "#selectModelosComparador option:selected" ).attr('data-pantalla')+'"</li><li class="icon-Camara">'+$( "#selectModelosComparador option:selected" ).attr('data-camara')+'</li><li class="icon-Memoria icon-Memoria'+$( "#selectModelosComparador option:selected" ).attr('data-memoria')+'GB">&nbsp;</li><li class="icon-Procesador icon-Procesador'+$( "#selectModelosComparador option:selected" ).attr('data-procesador')+'x">&nbsp;</li></ul></div></li><li class="precios"><div class="terminal1"></div><div class="terminal2"></div></li></ul></div></div>');
+
+
+	if ( $( "#selectModelos option:selected" ).attr('data-ancho') == "true") {
+		$('.landingTerminal .terminal1 img').addClass('ancho');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-ancho') == "true") {
+		$('.landingTerminal .terminal2 img').addClass('ancho');
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-procesador') == 'undefined') {
+		$('.terminal1 .icon-Procesador').remove();
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-procesador') == 'undefined') {
+		$('.terminal2 .icon-Procesador').remove();
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-camara') == 'undefined') {
+		$('.terminal1 .icon-Camara').remove();
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-camara') == 'undefined') {
+		$('.terminal2 .icon-Camara').remove();
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-memoria') == 'undefined') {
+		$('.terminal1 .icon-Memoria').remove();
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-memoria') == 'undefined') {
+		$('.terminal2 .icon-Memoria').remove();
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-wifi') == "true") {
+		$('.terminal1 .caracteristicas').append('<li class="icon-wifi">&nbsp;</li>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-wifi') == "true") {
+		$('.terminal2 .caracteristicas').append('<li class="icon-wifi">&nbsp;</li>');
+	}
+
+	if ($( "#selectModelos option:selected" ).attr('data-hd') == "true") {
+		$('.terminal1 .caracteristicas').append('<li class="icon-hd">&nbsp;</li>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-hd') == "true") {
+		$('.terminal2 .caracteristicas').append('<li class="icon-hd">&nbsp;</li>');
+	}
+
+
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'firefox') {
+		$('.terminal1 .caracteristicas').append('<li class="icon-firefox so"><img src="sections/images/oferta/iconFirefox.png" alt="" draggable="false"></li>');
+	}
+	else if ($( "#selectModelos option:selected" ).attr('data-so') == 'android') {
+		$('.terminal1 .caracteristicas').append('<li class="icon-android so"><img src="sections/images/oferta/iconAndroid.png" alt="" draggable="false"></li>');
+	}
+	else if ($( "#selectModelos option:selected" ).attr('data-so') == 'windows') {
+		$('.terminal1 .caracteristicas').append('<li class="icon-windows so"><img src="sections/images/oferta/iconWindows.png" alt="" draggable="false"></li>');
+	} else {
+		$('.terminal1 .caracteristicas').append('<li class="icon-ios8 so"><img src="sections/images/oferta/ios8.png" alt="" draggable="false"></li>');
+	}
+	if ($( "#selectModelos option:selected" ).attr('data-so') == 'undefined') {
+		$('.terminal1 .so').remove();
+	}
+
+
+	if ($( "#selectModelosComparador option:selected" ).attr('data-so') == 'firefox') {
+		$('.terminal2 .caracteristicas').append('<li class="icon-firefox so"><img src="sections/images/oferta/iconFirefox.png" alt="" draggable="false"></li>');
+	}
+	else if ($( "#selectModelosComparador option:selected" ).attr('data-so') == 'android') {
+		$('.terminal2 .caracteristicas').append('<li class="icon-android so"><img src="sections/images/oferta/iconAndroid.png" alt="" draggable="false"></li>');
+	}
+	else if ($( "#selectModelosComparador option:selected" ).attr('data-so') == 'windows') {
+		$('.terminal2 .caracteristicas').append('<li class="icon-windows so"><img src="sections/images/oferta/iconWindows.png" alt="" draggable="false"></li>');
+	} else {
+		$('.terminal2 .caracteristicas').append('<li class="icon-ios8 so"><img src="sections/images/oferta/ios8.png" alt="" draggable="false"></li>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-so') == 'undefined') {
+		$('.terminal2 .so').remove();
+	}
+
+	var preciosTerminal1 = $('#terminal .flexslider .slides > li.precios').html();
+	$('.contentComparador .flexslider .slides > li.precios .terminal1').html(preciosTerminal1);
+
+
+	if ($( "#selectModelosComparador option:selected" ).attr('data-contrato') != 'undefined') {
+		$('.precios .terminal2').append('<h3>P.V.P. Contrato: <span>'+$( "#selectModelosComparador option:selected" ).attr('data-contrato')+'€</span></h3>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-cuota30') != 'undefined' && $( "#selectModelosComparador option:selected" ).attr('data-cuota24') != 'undefined') {
+		$('.precios .terminal2').append('<h4>A plazos y sin intereses:</h4><p><span>24 cuotas: </span>'+$( "#selectModelosComparador option:selected" ).attr('data-cuota24')+'€</p><p><span>30 cuotas: </span>'+$( "#selectModelosComparador option:selected" ).attr('data-cuota30')+'€</p>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-cuota24') != 'undefined' && $( "#selectModelosComparador option:selected" ).attr('data-cuota30') == 'undefined') {
+		$('.precios .terminal2').append('<h4>A plazos y sin intereses:</h4><p><span>24 cuotas: </span>'+$( "#selectModelosComparador option:selected" ).attr('data-cuota24')+'€</p>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-cuota30') != 'undefined' && $( "#selectModelosComparador option:selected" ).attr('data-cuota24') == 'undefined') {
+		$('.precios .terminal2').append('<h4>A plazos y sin intereses:</h4><p><span>30 cuotas: </span>'+$( "#selectModelosComparador option:selected" ).attr('data-cuota30')+'€</p>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-tarjeta') != 'undefined') {
+		$('.precios .terminal2').append('<h3>P.V.P. Tarjeta: <span>'+$( "#selectModelosComparador option:selected" ).attr('data-tarjeta')+'€</span></h3>');
+		if ($( "#selectModelosComparador option:selected" ).attr('data-recargando') != 'undefined') {
+			$('.precios .terminal2').append('<h4>Recargando:</h4><p><span>'+$( "#selectModelosComparador option:selected" ).attr('data-recargando')+'€</span></p>');
+		}
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-libre') != 'undefined') {
+		$('.precios .terminal2').append('<h3>P.V.P. Libre: <span>'+$( "#selectModelosComparador option:selected" ).attr('data-libre')+'€</span></h3>');
+	}
+	if ($( "#selectModelosComparador option:selected" ).attr('data-seguro') != 'undefined') {
+		$('.precios .terminal2').append('<h5>Seguro Móvil: <span>'+$( "#selectModelosComparador option:selected" ).attr('data-seguro')+'€</span></h5>');
+	}
+
+	flexComparador();
+
+}
+
+function flex() {
+		$('.oferta1 #terminal .flexslider').flexslider({
+	        animation: "slide",
+	        slideshow: false,
+	        animationLoop: false,
+	    });
+
+	    $('.oferta1 #terminal .flexslider').on('touchstart', function(e) {
+	    	e.preventDefault();
+	    	e.stopPropagation();
+	    });
+	}
+
+function flexComparador() {
+		$('.oferta1 .contentComparador .flexslider').flexslider({
+	        animation: "slide",
+	        slideshow: false,
+	        animationLoop: false,
+	    });
+
+	    $('.oferta1 .contentComparador .flexslider').on('touchstart', function(e) {
+	    	e.preventDefault();
+	    	e.stopPropagation();
+	    });
+	}
+
+
+$('.content').on('touchstart click', '.comparador', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+
+	var marcasComparador = $('#selectMarcas').html();
+	var modelosComparador = $('#selectModelos').html();
+
+	$('#selectMarcasComparador').html(marcasComparador);
+	// $('#selectModelosComparador').html(modelosComparador);
+
+	resetModelos2();
+
+	var modeloVisible = $( "#selectModelos option:selected" ).val();
+
+	$('#selectModelosComparador option[value="'+modeloVisible+'"]').attr('disabled', 'disabled');
+
+	$('#comparador h2').html($( "#selectModelos option:selected" ).text() + '<span> vs </span>');
+
+	$('.oferta1 .contentComparador').remove();
+
+	$('#comparador').fadeIn();
+});
+
+$('#selectMarcasComparador').change(function () {
+    resetModelos2();
+});
+
+$('#comparador').on('touchstart click', '.close', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+    $("select").blur();
+	$('#comparador').fadeOut();
+});
+
+$('.content').on('touchstart click', '.shotShare', function(e){
+	e.preventDefault();
+	e.stopPropagation();
+
+	navigator.screenshot.save(function(error,res){
+	  if(error){
+
+            navigator.notification.confirm(
+                'No ha sido posible compartir el contenido. Inténtalo de nuevo más tarde', // message
+                errorCapture,            // callback to invoke with index of button pressed
+                'Error',           // title
+                ['OK']     // buttonLabels
+            );
+            function errorCapture() {
+            	//
+            };
+
+	  }else{
+	  	var queTerminal = $( "#selectModelos option:selected" ).text();
+
+	    var caption = queTerminal;
+	    var message = 'Todo sobre el '+queTerminal+' en La Tienda de Movistar';
+	    var picture = res.filePath;
+	    var link = 'http://goo.gl/n3B6d1';
+
+	    window.plugins.socialsharing.share(message, caption, picture, link);
+	  }
+	},'jpg',60,'ofertaMovistar');
+});
+
+function setModelos(dirigidoSelect) {
+
+	var json = (function () {
+        var json = null;
+        $.ajax({
+            'async': false,
+            'global': false,
+            'url': "sections/terminales.json",
+            'dataType': "json",
+            'success': function (data) {
+                 json = data;
+             }
+        });
+        return json;
+    })();
+
+    dirigidoSelect.html('<option value="0" disabled="disabled" selected="selected">Modelo</option><optgroup class="smartphone" label="Smartphones"></optgroup><optgroup class="tablet" label="Tablets"></optgroup><optgroup class="tv" label="Smart TVs"></optgroup>')
+
+
+    for (i = 0; i < json.length; i++) {
+    	if (json[i].dispositivo == "smartphone") {
+    		$('optgroup.smartphone').append('<option value="'+(i+1)+'"data-pantalla="'+json[i].pantalla+'" data-camara="'+json[i].camara+'" data-memoria="'+json[i].memoria+'" data-procesador="'+json[i].procesador+'" data-marca="'+json[i].marca+'" data-dispositivo="'+json[i].dispositivo+'" data-model="'+json[i].model+'" data-contrato="'+json[i].contrato+'" data-cuota24="'+json[i].cuota24+'" data-cuota30="'+json[i].cuota30+'" data-tarjeta="'+json[i].tarjeta+'" data-libre="'+json[i].libre+'" data-oferta="'+json[i].oferta+'" data-seguro="'+json[i].seguro+'" data-wifi="'+json[i].wifi+'" data-recargando="'+json[i].recargando+'" data-renueva="'+json[i].renueva+'" data-descuento="'+json[i].descuento+'" data-precioMinimo="'+json[i].precioMinimo+'" data-novedad="'+json[i].novedad+'" data-so="'+json[i].so+'" data-cuatrog="'+json[i].cuatrog+'" data-combinada="'+json[i].combinada+'" data-ancho="'+json[i].ancho+'">'+json[i].nombre+'</option>');
+    	}
+    	else if (json[i].dispositivo == "tablet") {
+    		$('optgroup.tablet').append('<option value="'+(i+1)+'"data-pantalla="'+json[i].pantalla+'" data-camara="'+json[i].camara+'" data-memoria="'+json[i].memoria+'" data-procesador="'+json[i].procesador+'" data-marca="'+json[i].marca+'" data-dispositivo="'+json[i].dispositivo+'" data-model="'+json[i].model+'" data-wifi="'+json[i].wifi+'" data-contrato="'+json[i].contrato+'" data-cuota24="'+json[i].cuota24+'" data-cuota30="'+json[i].cuota30+'" data-tarjeta="'+json[i].tarjeta+'" data-libre="'+json[i].libre+'" data-oferta="'+json[i].oferta+'" data-seguro="'+json[i].seguro+'" data-recargando="'+json[i].recargando+'" data-renueva="'+json[i].renueva+'" data-descuento="'+json[i].descuento+'" data-precioMinimo="'+json[i].precioMinimo+'" data-novedad="'+json[i].novedad+'" data-so="'+json[i].so+'" data-cuatrog="'+json[i].cuatrog+'" data-combinada="'+json[i].combinada+'" data-ancho="'+json[i].ancho+'">'+json[i].nombre+'</option>');
+    	}
+    	else {
+    		$('optgroup.tv').append('<option value="'+(i+1)+'"data-pantalla="'+json[i].pantalla+'" data-camara="'+json[i].camara+'" data-memoria="'+json[i].memoria+'" data-procesador="'+json[i].procesador+'" data-marca="'+json[i].marca+'" data-dispositivo="'+json[i].dispositivo+'" data-model="'+json[i].model+'" data-hd="'+json[i].hd+'" data-wifi="'+json[i].wifi+'" data-contrato="'+json[i].contrato+'" data-cuota24="'+json[i].cuota24+'" data-cuota30="'+json[i].cuota30+'" data-tarjeta="'+json[i].tarjeta+'" data-libre="'+json[i].libre+'" data-oferta="'+json[i].oferta+'" data-seguro="'+json[i].seguro+'" data-recargando="'+json[i].recargando+'" data-renueva="'+json[i].renueva+'" data-descuento="'+json[i].descuento+'" data-precioMinimo="'+json[i].precioMinimo+'" data-novedad="'+json[i].novedad+'" data-so="'+json[i].so+'" data-cuatrog="'+json[i].cuatrog+'" data-combinada="'+json[i].combinada+'" data-ancho="'+json[i].ancho+'">'+json[i].nombre+'</option>');
+    	}
+    };
+
+    var variableModelos = '<option value="0" disabled="disabled" selected="selected">Modelo</option>';
+    variableModelos += $('optgroup.smartphone').html();
+    variableModelos += $('optgroup.tablet').html();
+    variableModelos += $('optgroup.tv').html();
+
+
+    dirigidoSelect.html(variableModelos);
+
+};
+
+function resetModelos() {
+
+	setModelos($('#selectModelos'));
+
+	// Tipo de dispositivo
+	var dispositivoMostrado = $('#selectDispositivos option:selected').attr('value');
+	// Rango de precios
+	var precioMostrado = $('#selectPrecios option:selected').attr('value');
+	// Marca
+	var marcaMostrada = $('#selectMarcas option:selected').attr('value');
+
+
+	if (dispositivoMostrado > 0) {
+		$('#selectModelos option').each(function() {
+
+			if ($(this).attr('data-dispositivo') != $('#selectDispositivos option:selected').attr('data-dispositivo')) {
+				$(this).remove();
+			}
+
+		});
+	}
+
+	$('#selectModelos option').each(function() {
+		if ($(this).attr('data-contrato') != 'undefined') {
+			if (parseInt($(this).attr('data-contrato')) > precioMostrado) {
+				$(this).remove();
+			}
+		}
+		else {
+			if ( parseInt($(this).attr('data-libre')) > precioMostrado ) {
+				$(this).remove();
+			}
+		}
+	});
+
+	$('#selectMarcas option').attr('disabled', 'disabled');
+	$('#selectModelos option').each(function() {
+		var marcaterminal = $(this).attr('data-marca');
+
+		$('#selectMarcas option[data-marca="'+marcaterminal+'"]').removeAttr("disabled", "disabled");
+
+	});
+
+
+	if (marcaMostrada > 0) {
+		$('#selectModelos option').each(function() {
+			var marcaterminal = $(this).attr('data-marca');
+			if (marcaterminal != $('#selectMarcas option:selected').attr('data-marca')) {
+				$(this).remove();
+			}
+		});
+	}
+
+
+	$('#selectModelos').prepend('<option value="0" disabled="disabled" selected="selected">Modelo</option>');
+
+	$('#terminal .flexslider').remove();
+
+};
+
+function resetModelos2() {
+
+	setModelos($('#selectModelosComparador'));
+
+	// Tipo de dispositivo
+	var dispositivoMostrado = $('#selectDispositivos option:selected').attr('value');
+	// Rango de precios
+	var precioMostrado = $('#selectPrecios option:selected').attr('value');
+	// Marca
+	var marcaMostrada = $('#selectMarcasComparador option:selected').attr('value');
+
+
+	if (dispositivoMostrado > 0) {
+		$('#selectModelosComparador option').each(function() {
+
+			if ($(this).attr('data-dispositivo') != $('#selectDispositivos option:selected').attr('data-dispositivo')) {
+				$(this).remove();
+			}
+
+		});
+	}
+	else {
+		$('#selectModelosComparador option').each(function() {
+
+			if ($(this).attr('data-dispositivo') != $('#selectModelos option:selected').attr('data-dispositivo')) {
+				$(this).remove();
+			}
+
+		});
+	}
+
+
+	$('#selectModelosComparador option').each(function() {
+		if ($(this).attr('data-contrato') != 'undefined') {
+			if (parseInt($(this).attr('data-contrato')) > precioMostrado) {
+				$(this).remove();
+			}
+		}
+		else {
+			if ( parseInt($(this).attr('data-libre')) > precioMostrado ) {
+				$(this).remove();
+			}
+		}
+	});
+
+
+	$('#selectMarcasComparador option').attr('disabled', 'disabled');
+	$('#selectModelosComparador option').each(function() {
+		var marcaterminal = $(this).attr('data-marca');
+
+		$('#selectMarcasComparador option[data-marca="'+marcaterminal+'"]').removeAttr("disabled", "disabled");
+
+	});
+
+
+	if (marcaMostrada > 0) {
+		$('#selectModelosComparador option').each(function() {
+			var marcaterminal = $(this).attr('data-marca');
+			if (marcaterminal != $('#selectMarcasComparador option:selected').attr('data-marca')) {
+				$(this).remove();
+			}
+		});
+	}
+
+
+	$('#selectModelosComparador').prepend('<option value="0" disabled="disabled" selected="selected">Modelo</option>');
+
+
+	var modeloVisible = $( "#selectModelos option:selected" ).val();
+
+	$('#selectModelosComparador option[value="'+modeloVisible+'"]').attr('disabled', 'disabled');
+
+	// $('.flexslider').remove();
+
+};
+
+setModelos($('#selectModelos'));
+
+</script>

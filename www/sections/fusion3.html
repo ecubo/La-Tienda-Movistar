@@ -1,0 +1,209 @@
+<style>
+
+	#paquetes {
+		width: 100%;
+		overflow: auto;
+	}
+
+	#paquetes li {
+		width: 100%;
+		font-family: 'Movistar Headline';
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		padding: 5px 0;
+		background-color: #005c84;
+		margin-bottom: 10px;
+		transition: .3s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	#detalle {
+		height: 38%;
+		padding: 15px;
+		color: #7f7f7f;
+		font-family: 'Movistar Headline';
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		border-right: 30px solid #fff;
+	}
+
+	#detalle h3, #detalle h4 {
+		font-weight: normal;
+		font-size: 1em;
+		line-height: 1em;
+		margin-bottom: .5em;
+	}
+
+	#detalle h4 {
+		color: rgb(0,92,132);
+		font-size: .8em;
+	}
+
+	#detalle h5 {
+		font-weight: normal;
+		font-size: .7em;
+		text-indent: -0.5em;
+		margin-left: .5em;
+		line-height: 1.3em;
+	}
+
+	#detalle h5:before {
+		content: "• ";
+	}
+
+	#detalle h5 span {
+		font-weight: bold;
+		color: rgb(190,0,121);
+	}
+
+	.fusion3 .flexslider {
+		width: 100%;
+		height: 100%;
+	}
+
+	.fusion3 .flex-control-paging li a {
+		background: rgba(0,92,132,.4);
+	}
+
+	.fusion3 .flex-control-paging li a.flex-active {
+		background: rgba(0,92,132,.9);
+	}
+
+	.fusion3 .flex-control-nav {
+		top: auto !important;
+		bottom: -15px !important;
+	}
+
+	img.mas {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#paquetes a.icon {
+		float: right;
+		text-align: center;
+		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		height: 40px;
+		transition: .3s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	#paquetes li.active a.icon {
+		transform: rotate(90deg) translate(0,-10px);
+		-webkit-transform: rotate(90deg) translate(0,-10px);
+	}
+
+	#paquetes li.active {
+		margin-bottom: 70%;
+	}
+
+
+</style>
+
+
+<div class="content landing fusion3" data-role="Nuevo Fusión TV">
+	<ul id="paquetes">
+		<li id="paraTodos">Fusión TV Para Todos<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+		<li id="futbol">Fusión TV Fútbol<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+		<li id="energia">Fusión TV Energía<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+		<li id="total">Fusión TV Total<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+<!-- 		<li id="mas">Añade mucho más<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li> -->
+	</ul>
+	<div id="detalle">
+		<!-- <h3>Lo más acertado <strong>para toda la familia</strong> con los mejores contenidos para todos los gustos.</h3>
+		<h4>Para disfrutar de las mejores series, cine, programación infantil, documentales...</h4>
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="sections/images/fusion/incluido.jpg" alt="">
+				</li>
+				<li>
+					<img src="sections/images/fusion/todosExperiencias.jpg" alt="">
+				</li>
+				<li>
+					<img src="sections/images/fusion/precioTodos.jpg" alt="">
+				</li>
+			</ul>
+		</div> -->
+
+	</div>
+
+	<div class="maskSlider"></div>
+</div>
+
+<script>
+
+
+
+	$('#paquetes li').on('click touchstart', function() {
+
+		var cual = $(this).attr('id');
+
+		$('.fusion3 .flexslider').remove();
+		$('#detalle').html('');
+		$('#detalle').hide();
+
+		if (!$(this).hasClass('active')) {
+			$('#paquetes li').removeClass('active');
+			$(this).addClass('active');
+			setTimeout(function(){
+				if (cual == 'paraTodos') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h3>Lo más acertado <strong>para toda la familia</strong> con los mejores contenidos para todos los gustos.</h3><h4>Para disfrutar de las mejores series, cine, programación infantil, documentales...</h4></li><li><h4>Disfruta de:</h4><img src="sections/images/fusion/logosTodos.png" alt=""></li><li><h4>La TV que tú eliges con <strong>Fibra 10 Mb, móvil y fijo incluidos</strong>.</h4><h5 class="tv">Con los mejores contenidos</h5><h5 class="fibra">Fibra Óptica 10 Mb / 100 Mb, HD, máxima velocidad, simultaneidad...</h5><h5 class="movil">Llamadas ilimitadas, 4G y 2 Gb</h5><h5 class="fijo">Todas las llamadas a fijos, 550 min/mes a móviles y cuota de línea incluida</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Multidispositivo: </span>Llévate <strong>tu televisión donde quieras</strong>.</h5><h5><span>Servicio de Grabaciones: </span>Graba <strong>hasta 350 h.</strong> incluso de forma simultanea. Disponible 180 días.</h5></li><li><img src="sections/images/fusion/precioTodos.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:70});
+				}
+				else if (cual == 'futbol') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h3>Liga <strong>BBVA</strong>, <strong>UEFA Champions League</strong>, <strong>UEFA Europa League</strong>, <strong>Copa del Rey</strong> y Clasificatorios <strong>Eurocopa 2016</strong>.</h3><h4>Para vivir todo el fútbol.</h4></li><li><h4>Disfruta de:</h4><img src="sections/images/fusion/logosFutbol.png" alt=""></li><li><h4>La TV que tú eliges con <strong>Fibra 10 Mb, móvil y fijo incluidos</strong>.</h4><h5 class="tv">Con los mejores contenidos</h5><h5 class="fibra">Fibra Óptica 10 Mb / 100 Mb, HD, máxima velocidad, simultaneidad...</h5><h5 class="movil">Llamadas ilimitadas, 4G y 2 Gb</h5><h5 class="fijo">Todas las llamadas a fijos, 550 min/mes a móviles y cuota de línea incluida</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Multidispositivo: </span>Llévate <strong>tu televisión donde quieras</strong>.</h5><h5><span>Servicio de Grabaciones: </span>Graba <strong>hasta 350 h.</strong> incluso de forma simultanea. Disponible 180 días.</h5></li><li><img src="sections/images/fusion/precioFutbol.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:130});
+				}
+				else if (cual == 'energia') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h3>Lo <strong>mejor del motor</strong>, tenis, ciclismo, baloncesto...</h3><h4>Para los amantes del deporte.</h4></li><li><h4>Disfruta de:</h4><img src="sections/images/fusion/logosEnergia.png" alt=""></li><li><h4>La TV que tú eliges con <strong>Fibra 10 Mb, móvil y fijo incluidos</strong>.</h4><h5 class="tv">Con los mejores contenidos</h5><h5 class="fibra">Fibra Óptica 10 Mb / 100 Mb, HD, máxima velocidad, simultaneidad...</h5><h5 class="movil">Llamadas ilimitadas, 4G y 2 Gb</h5><h5 class="fijo">Todas las llamadas a fijos, 550 min/mes a móviles y cuota de línea incluida</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Multicámara: </span><strong>6 puntos de vista distintos, simultaneos, en pantalla completa y sin cortes publicitarios</strong> para no perderte detalle.</h5><h5><span>Multidispositivo: </span>Llévate <strong>tu televisión donde quieras</strong>.</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Servicio de Grabaciones: </span>Graba <strong>hasta 350 h.</strong> incluso de forma simultanea. Disponible 180 días.</h5></li><li><img src="sections/images/fusion/precioEnergia.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:190});
+				}
+				else if (cual == 'total') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h3>Liga <strong>BBVA</strong>, <strong>UEFA Champions League</strong>, <strong>UEFA Europa League</strong>, <strong>Copa del Rey</strong> y Clasificatorios <strong>Eurocopa 2016</strong>.</h3><h4>Para vivir todo el fútbol.</h4></li><li><h4>Disfruta de:</h4><img src="sections/images/fusion/logosTotal.png" alt=""></li><li><h4>La TV que tú eliges con <strong>Fibra 10 Mb, móvil y fijo incluidos</strong>.</h4><h5 class="tv">Con los mejores contenidos</h5><h5 class="fibra">Fibra Óptica 10 Mb / 100 Mb, HD, máxima velocidad, simultaneidad...</h5><h5 class="movil">Llamadas ilimitadas, 4G y 2 Gb</h5><h5 class="fijo">Todas las llamadas a fijos, 550 min/mes a móviles y cuota de línea incluida</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Multicámara: </span><strong>6 puntos de vista distintos, simultaneos, en pantalla completa y sin cortes publicitarios</strong> para no perderte detalle.</h5><h5><span>Multidispositivo: </span>Llévate <strong>tu televisión donde quieras</strong>.</h5></li><li><h4>Incluye experiencias únicas:</h4><h5><span>Servicio de Grabaciones: </span>Graba <strong>hasta 350 h.</strong> incluso de forma simultanea. Disponible 180 días.</h5><h5><span>Películas y series: </span>Más de <strong>3.000 películas y series renovadas mensualmente</strong>.</h5></li><li><img src="sections/images/fusion/precioTotal.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:250});
+				}
+				else if (cual == 'mas') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h4>Si quieres ver el partido del Plus, contrata:</h4><img src="sections/images/fusion/plus.jpg" alt=""></li><li><h4>Y además:</h4><img src="sections/images/fusion/series.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:250});
+				}
+				else {
+					$('#detalle').html('');
+					$('#detalle').css({top:'200%'});
+				}
+
+				flex();
+				$('#detalle').show();
+			},300);
+
+		}
+		else {
+			$(this).removeClass('active');
+			$('.fusion3 .flexslider').remove();
+		}
+
+	});
+
+	function flex() {
+		$('.fusion3 .flexslider').flexslider({
+	        animation: "slide",
+	        slideshow: false,
+	        animationLoop: false,
+	    });
+
+	    $('.fusion3 .flexslider').on('touchstart', function(e) {
+	    	e.preventDefault();
+	    	e.stopPropagation();
+	    });
+	}
+
+</script>

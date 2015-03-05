@@ -1,0 +1,182 @@
+$altura: 50px;
+$alturaIOS: 65px;
+
+@import 'colores';
+@import 'fonts';
+
+*, *:after, *:before {
+	margin: 0;
+	padding: 0;
+	-webkit-padding:0;
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	outline: none;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+    font: $fontBase;
+    background-color: $bkColor;
+}
+
+a {
+	color: $azul;
+	text-decoration: none;
+}
+
+div, section, article {
+	position: relative;
+}
+
+ul,ol,li{
+	list-style:none;
+}
+
+a.icon {
+	width: 50px;
+	height: 100%;
+	color: #fff;
+	display: block;
+	text-align: center;
+	font-family: 'Movistar Icons';
+	font-size: 44px;
+	font-weight: normal;
+	line-height: 50px;
+	text-rendering: geometricPrecision;
+}
+
+#sumario {
+	a.icon.active {
+		color: rgb(0,92,132);
+		background-color: #fff;
+		border-radius: 50%;
+		border: 10px solid rgb(0,92,132);
+		line-height: 30px;
+		text-align: center;
+		text-indent: -8px;
+		font-size: 46px;
+	}
+}
+
+#mapa {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: #fff;
+	-webkit-transition: 200ms;
+	transition: 200ms;
+	-webkit-perspective: 1000px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+
+	&.active {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	.headerLocation {
+		height: $altura;
+		background-color: $azul;
+		#ios & {
+			padding-top: 15px;
+			height: $alturaIOS;
+		}
+
+		a {
+			float: left;
+		}
+
+		h2 {
+			color: #fff;
+			font-family: 'Movistar Headline';
+			font-weight: normal;
+			font-size: 1em;
+			line-height: 48px;
+			padding-left: 66px;
+		}
+	}
+
+	ul {
+		height: 50px;
+		background-color: $azul;
+
+		li {
+			float: left;
+			width: 50%;
+			text-align: center;
+			height: 100%;
+			line-height: 50px;
+			list-style: none;
+			color:rgb(0,92,132);
+			font-family:'Movistar Headline';
+			padding-left: 22px;
+
+			&#autonomos a:after {
+				content: "auton\00f3mos";
+			}
+			&#reparacion a:after {
+				content: "reparaci\00f3n";
+			}
+
+			a.icon {
+				position: relative;
+
+				&:after {
+					position: absolute;
+					font-family: 'Movistar Headline';
+					font-size: .3em;
+					top: -2px;
+					color: #7fadc1;
+				}
+
+			    &.active {
+					color: rgb(0,92,132);
+					background-color: #fff;
+					border-radius: 50%;
+					border: 10px solid rgb(0,92,132);
+					line-height: 30px;
+					text-align: center;
+					text-indent: -8px;
+					font-size: 46px;
+					&:after {
+						font-size: 13px;
+						left: 45px;
+						top: -2px;
+						height: 50px;
+						color:#fff;
+					}
+			    }
+			}
+		}
+	}
+
+	#controles {
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	}
+	#map-canvas {
+		height: calc(100% - 100px);
+		height:-webkit-calc(100% - 100px);
+		#ios & {
+			height: calc(100% - 115px);
+			height:-webkit-calc(100% - 115px);
+		}
+	}
+}

@@ -1,0 +1,100 @@
+header {
+	width: 100%;
+	position: absolute;
+	background-color: $azul;
+	height: $altura;
+	#ios & {
+		padding-top: 15px;
+		height: $alturaIOS;
+	}
+
+	a#menu {
+		float: left;
+		position: relative;
+		color: $verde;
+
+		@media all and (orientation: landscape) {
+			margin-right: 105px;
+			float: right;
+		}
+
+		&:after {
+			content: ":";
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #fff;
+			opacity: .6;
+
+			@media all and (orientation: landscape) {
+				content: "La Tienda";
+				font-family: 'Movistar Headline';
+				font-size: 19px;
+				line-height: 45px;
+				opacity: 1;
+				color: #fff;
+				width: 90px;
+				font-weight: bold;
+				left: 50px;
+			}
+		}
+
+		&:before {
+			content: "H";
+			position: absolute;
+			top: 0;
+			left: 3px;
+			color: #fff;
+			opacity: 0;
+			color: $verde;
+			transition: transform .2s linear, opacity .2s linear;
+
+			@media all and (orientation: landscape) {
+				content: "";
+			}
+		}
+
+		&.active,
+		&:active {
+			text-indent: -9999px;
+
+			@media all and (orientation: landscape) {
+				text-indent: 0;
+			}
+		}
+
+		&.active:before,
+		&.active:after,
+		&:active:before,
+		&:active:after {
+			text-indent: 0px;
+		}
+
+		&.active:before,
+		&:active:before {
+			opacity: 1;
+			transform: scale(1.1);
+		}
+	}
+
+	a#back {
+		float: right;
+		visibility: hidden;
+
+		@media all and (orientation: landscape) {
+			position: absolute;
+		}
+	}
+
+	h1 {
+		font: $fontH1;
+		text-align: center;
+		line-height: 50px;
+		color: #fff;
+
+		@media all and (orientation: landscape) {
+			text-align: left;
+			padding-left: 50px;
+		}
+	}
+}

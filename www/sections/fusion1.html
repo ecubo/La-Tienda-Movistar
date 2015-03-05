@@ -1,0 +1,86 @@
+<style>
+
+/*	.fusion1 {
+		background-image: url(sections/images/fusion3.jpg);
+	}*/
+
+	.fusion1 .flex-control-nav {
+		top: auto;
+		bottom: 5px;
+	}
+
+    .fusion1 .flex-control-paging li a {
+    	background: rgba(255,255,255,.6);
+    }
+
+    .fusion1 .flex-control-paging li a.flex-active {
+    	background: rgba(255,255,255,1);
+    }
+
+    .fusion1 .flex-viewport,
+    .fusion1 .slides {
+    	height: 100% !important;
+    }
+
+    .fusion1 .slide > li {
+    	overflow: hidden;
+    }
+
+
+
+</style>
+
+<div class="content landing fusion1" data-role="Nuevo Fusión TV" style="padding:0 0 50px 0;">
+<!-- 	Esto es el apartado 1 de fusión -->
+	<div class="flexslider" style="margin:0; box-shadow:0 0 10px rgba(0,0,0,.5);height:100%; overflow:hidden;">
+		<ul class="slides">
+			<li style="font-family:'Movistar Headline'; font-weight:normal;height: 100%; color:#7f7f7f;position:relative; overflow:hidden;">
+				<div style="width:100%; height:100%; padding:15px;">
+					<h3 style="color: #7ab800;font-size:1em;line-height:2em;">La mejor TV en HD</h3>
+					<p style="font-size:.8em;line-height:1em;margin-bottom:.5em;">Navega como mínimo <strong>10 veces más rápido</strong>, disfruta de la <strong>televisión en HD</strong>, comparte archivos de gran tamaño, tus fotos y vídeos en segundos y juega online con <strong>la mejor respuesta del mercado</strong> y sin cortes.</p>
+					<p style="font-size:.8em;line-height:1em;margin-bottom:.5em;">Y además, de forma <strong>simultánea sin que la calidad de la conexión se vea afectada</strong>.</p>
+					<img class="vertical" src="sections/images/fusion/todo1.jpg" style="width:90%;position:absolute;bottom:0; left:0; right:0; margin:0 auto;" />
+				</div>
+<!-- 			    <img class="vertical" src="sections/images/fusion/todo1.jpg" />
+			    <img class="horizontal" src="cdvfile://localhost/persistent/contents/sections/images/help/help1h.jpg" /> -->
+			</li>
+			<li style="position:relative;overflow:hidden;height:100%;">
+			    <img class="vertical" src="sections/images/fusion/todo2.jpg" />
+			</li>
+			<li style="font-family:'Movistar Headline'; font-weight:normal;height: 100%; color:#7f7f7f; position:relative; overflow:hidden;">
+				<div style="width:100%; height:100%; padding:15px;">
+					<img class="vertical" src="sections/images/fusion/todo3.jpg" style="width: 130%; position: absolute; bottom: -40px; right: -43px;" />
+					<div style="font-size:.7em;line-height:1em;margin-bottom:1em;color:#005c84;margin-left:10px;">
+						<h3 style="color: #7ab800;font-size:19px;line-height:2em;">Tarjetas Regalo</h3>
+						<p style="font-size:.8em;line-height:1em;margin-bottom:1em;color:#7f7f7f;font-size:15px;">Regala todo el fútbol y las mejores series.</p>
+						<p style="margin-bottom:.5em;"><span style="margin-left:-8px;">• </span>Regala 4 meses de suscripción a Movistar Series.</p>
+						<p style="margin-bottom:.5em;"><strong>Tarjeta Regalo Series</strong>, compatible con cualquier modalidad de Fusión TV.</p>
+					</div>
+					<div style="font-size:.7em;line-height:1em;margin-bottom:1em;color:#005c84;margin-left:10px;">
+						<p style="margin-bottom:.5em;"><span style="margin-left:-8px;">• </span>Y cómo no, ¡el mejor fútbol!</p>
+						<p style="margin-bottom:.5em;"><strong>Tarjeta Regalo Fútbol</strong> con el mejor fútbol hasta el final de la temporada (15 de junio de 2015).</p>
+						<p style="margin-bottom:.5em;">Compatible con <br/>Fusión TV Para todos.</p>
+					</div>
+				</div>
+<!-- 			    <img class="vertical" src="sections/images/fusion/todo3.jpg" />
+			    <img class="horizontal" src="cdvfile://localhost/persistent/contents/sections/images/help/help1h.jpg" /> -->
+			</li>
+		</ul>
+	</div>
+
+	<div class="maskSlider"></div>
+</div>
+
+<script>
+	$('.fusion1 .flexslider').flexslider({
+        animation: "slide",
+        slideshow: false,
+        animationLoop: false,
+    });
+
+    $('.fusion1 .flexslider').on('touchstart', function(e) {
+    	e.preventDefault();
+    	e.stopPropagation();
+    });
+
+</script>

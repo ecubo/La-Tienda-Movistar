@@ -1,0 +1,357 @@
+#sumario {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	@media all and (orientation: landscape) {
+		max-width: 270px;
+	}
+
+	.content {
+		width: 100%;
+		height: 100%;
+		padding-bottom: 50px;
+		overflow: hidden;
+
+		.divContent {
+			background-color: $azul;
+			&:not(:last-child) {
+				border-bottom: 1px solid #fff;
+			}
+
+			// @media all and (min-width: 540px) {
+			// 	padding: 5px;
+			// 	width: 50%;
+			// 	float: left;
+			// 	&:not(:last-child) {
+			// 		border-bottom: none;
+			// 	}
+			// }
+
+			// @media all and (min-width: 800px) {
+			// 	width: 33.33333333333333%;
+
+			// 	&.destacado {
+			// 		width: 66.66666666666666%;
+
+			// 		img {
+			// 			height: auto;
+			// 			width: 100%;
+			// 			margin-left: 0;
+			// 			transform: translate(0,0);
+
+			// 		}
+
+			// 		a.active img {
+			// 			width: 105%;
+			// 			margin-left: 50%;
+			// 			transform: translate(-50%,-2.5%);
+			// 		}
+			// 	}
+			// }
+		}
+
+		a {
+			display: block;
+			width: 100%;
+			height: 180px;
+			overflow: hidden;
+			position: relative;
+			color: #fff;
+
+			// @media all and (min-width: 540px) {
+			// 	border: 1px solid $bkBlancoA50;
+			// }
+
+			// @media all and (min-width: 800px) {
+			// 	height: 260px;
+			// }
+
+			&:not(:last-child) {
+				border-bottom: 1px solid #fff;
+				// @media all and (min-width: 540px) {
+				// 	border-bottom: none;
+				// }
+			}
+			// transition: height .3s, border .3s;
+			// transition-timing-function: ease-out-cubic;
+			// -webkit-perspective: 1000;
+
+			.titular {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: auto;
+				background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.4) 30%,rgba(0,0,0,1) 100%);
+				// background-color: $negroA50;
+				padding: 15px;
+				border-top: 0px solid;
+				transition: background .3s, border .3s, padding .3s;
+				transition-timing-function: ease-out-cubic;
+				-webkit-perspective: 1000;
+
+				h3 {
+					font-family: 'Movistar Headline';
+					font-weight: normal;
+					font-size: 18px;
+					line-height: 1em;
+					transition: font-size .3s;
+					transition-timing-function: ease-out-cubic;
+					-webkit-perspective: 1000;
+
+					&:after {
+						content: "b";
+						font-family: 'Movistar Icons';
+						font-size: 44px;
+						position: absolute;
+						top:14px;
+						right: 0;
+						transform: rotate(180deg);
+						width: 36px;
+						line-height: 16px;
+
+						transition: transform .3s;
+						transition-timing-function: ease-out-cubic;
+						-webkit-perspective: 1000;
+					}
+				}
+
+				h2 {
+					color:$negro40;
+					font-family:'Movistar Headline';
+					font-weight: normal;
+					font-size: 14px;
+					transition: font-size .3s;
+					transition-timing-function: ease-out-cubic;
+					-webkit-perspective: 1000;
+				}
+			}
+
+			img {
+				height: 105%;
+				margin-left: 50%;
+				transform: translate(-50%,-2.5%);
+				// transition: opacity.3s;
+				// transition-timing-function: ease-out-cubic;
+				// -webkit-perspective: 1000;
+
+				// @media all and (min-width: 420px) and (max-width: 540px) {
+				// 	width: 105%;
+				// 	height: auto;
+				// 	margin-left: 0;
+				// 	transform: translate(-2.5%,-55%);
+				// 	margin-top: 20%;
+				// }
+			}
+		}
+
+		a.active {
+
+			// @media all and (min-width: 540px) {
+			// 	border: 2px solid #fff;
+			// 	// box-shadow: 0 0 10px #fff;
+			// }
+
+			img {
+				// filter: blur(2px);
+			}
+			.titular {
+				height: 69px;
+				// height: 100%;
+				// background: linear-gradient(to bottom, rgba(0,92,132,0) 0%, rgba(0,92,132,.4) 30%, rgba(0,92,132,1) 100%);
+				background: $azulA90;
+				border-top: 1px solid #fff;
+
+				h3 {
+					font-size: 22px;
+					line-height: 37px;
+					// color: $negro20;
+
+					// @media all and (min-width: 800px) {
+					// 	line-height: 430px;
+					// }
+
+					&:after {
+						right: 8px;
+						transform: rotate(0deg);
+						background: #fff;
+						color: $azul;
+						line-height: 28px;
+						width: 29px;
+						text-indent: -7px;
+						border-radius: 50%;
+						top: 8px
+						// content: "";
+					}
+				}
+
+				h2 {
+					font-size: 0;
+				}
+			}
+		}
+
+		#ios & {
+			padding-bottom: 65px;
+		}
+	}
+
+	ul {
+		width: 100%;
+		height: 50px;
+		background-color: $azul;
+		box-shadow: 0 0 5px #4f4f4f;
+		position: relative;
+		z-index: 1;
+
+		#ios & {
+			height: 65px;
+			padding-top: 15px;
+		}
+
+		li {
+			width: 25%;
+			float: left;
+
+			// @media all and (orientation: landscape) {
+			// 	width: 33.33333333333333%;
+
+			// 	&.home {
+			// 		display: none;
+			// 	}
+			// }
+
+			#ios &.social a {
+				text-transform: uppercase;
+			}
+
+			a {
+				margin: 0 auto;
+
+
+			}
+		}
+
+		li:nth-child(2) button {
+			transform: rotate(90deg);
+		}
+	}
+
+	#social {
+		transition: height .2s, opacity .2s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+		width: 100%;
+		height: 0;
+		opacity: 0;
+		background-color: $azul;
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			content: "Comparte tu App";
+			font-family: 'Movistar Headline';
+			font-size: .8em;
+			line-height: 1em;
+			color: #fff;
+			display: block;
+			padding: 15px;
+		}
+
+		a {
+			position: relative;
+			width: 25%;
+			opacity: 0;
+			margin-left: 50%;
+			height: 50px;
+			position: absolute;
+			top: 0;
+			transition: opacity .2s .3s, top .2s .3s;
+			transition-timing-function: ease-out-cubic;
+			-webkit-perspective: 1000;
+
+			&:after {
+				position: absolute;
+				font-family: 'Movistar Headline';
+				font-size: .3em;
+				top: -2px;
+				color: $azul50;
+			}
+
+			&:first-child:after {
+				content: "twitter";
+			}
+			&:nth-child(2):after {
+				content: "facebook";
+			}
+			&:last-child:after {
+				content: "email";
+			}
+		}
+	}
+
+	#social.active {
+		height: 150px;
+		opacity: 1;
+
+		a {
+			opacity: 1;
+		}
+
+		a:nth-child(2) {
+			top: 50px;
+		}
+
+		a:last-child {
+			top: 100px;
+		}
+	}
+
+	#wrapper {
+		background-color: $azul;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		-ms-touch-action: none;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-text-size-adjust: none;
+		-moz-text-size-adjust: none;
+		-ms-text-size-adjust: none;
+		-o-text-size-adjust: none;
+		text-size-adjust: none;
+
+		#scroller {
+			width: 100%;
+			// height: 100%;
+			position: absolute;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+			-o-transform: translateZ(0);
+			transform: translateZ(0);
+
+			// @media all and (min-width: 540px) {
+			// 	padding: 5px;
+			// }
+		}
+
+		#scroller:after {
+			content: "H";
+			position: absolute;
+			top: -190px;
+			color: #fff;
+			font-family: 'Movistar Icons';
+			font-size: 150px;
+			width: 100%;
+			text-align: center;
+			opacity: .2;
+			text-shadow: 0 0 20px rgba(0,0,0,.6);
+		}
+	}
+}

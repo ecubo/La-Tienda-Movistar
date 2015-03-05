@@ -1,0 +1,72 @@
+#navbar {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	ul {
+		width: 100%;
+		height: 50px;
+		background-color: $azul;
+		border-top: 1px solid $azul;
+
+		li {
+			float: left;
+			height: 100%;
+			position: relative;
+
+			a {
+				width: 100%;
+				color: #fff;
+				font-size: 36px;
+				line-height: 36px;
+				margin-bottom: -13px;
+				position: absolute;
+			}
+
+			span {
+				text-align: center;
+				width: 100%;
+				display: block;
+				line-height: 77px;
+				font-size: 10px;
+				color: #fff;
+				position: absolute;
+			}
+		}
+
+		li.active {
+			background-color: #fff;
+
+			a, span {
+				color: $azul;
+			}
+
+		}
+	}
+
+	ul.nav0 {
+		height: 0;
+		display: none;
+	}
+
+	ul.nav1 li {
+		width: 100%;
+	}
+
+	ul.nav2 li {
+		width: 50%;
+	}
+
+	ul.nav3 li {
+		width: 33.33333333333333%;
+	}
+
+	ul.nav4 li {
+		width: 25%;
+	}
+
+	ul.nav5 li {
+		width: 20%;
+	}
+}

@@ -1,0 +1,21 @@
+*, *:after, *:before {
+	box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+@import 'resets';
+@import 'video';
+@import 'scroll';
+
+@import 'header';
+
+@import 'main';
+// @import 'landings';
+
+@import 'footer';
+
+@import 'sumario';
+
+@import 'flexslider';
+@import 'help';

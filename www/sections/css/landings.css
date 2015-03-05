@@ -1,0 +1,32 @@
+#home {
+	background-image: url(../images/home1.jpg);
+}
+
+#home .content {
+	background-image: url(../images/home2.png);
+}
+
+#fusion {
+	background-image: url(../images/fusion1.jpg);
+}
+
+#fusion .content {
+	background-image: url(../images/fusion2.png);
+}
+
+#soloMovil {
+	background-image: url(../images/soloMovil1.jpg);
+}
+
+#soloMovil .content {
+	background-image: url(../images/soloMovil2.png);
+}
+
+#oferta {
+	background-image: url(../images/oferta1.jpg);
+	background-position: center bottom;
+}
+
+#oferta .content {
+	background-image: url(../images/oferta2.png);
+}

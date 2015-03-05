@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>La Tienda Movistar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
+
+        <style rel="stylesheet" type="text/css">
+            /**********************/
+            /* PRECARGA DE PAGINA */
+            /**********************/
+            #sumario, #page-wrap, #mapa {display: none;}
+            #pre-load-web {width:100%;position:absolute;background:#fff;left:0px;top:0px;z-index:999}
+            /*aqui centramos la imagen si coloco margin left -30 es por que la imagen mide 60 */
+            #pre-load-web #imagen-load{left:50%;margin-left:-30px;position:absolute;}
+            /* Loading Circle */
+            .ball {
+              background-color: rgba(0,0,0,0);
+              border:5px solid rgb(0,92,132);
+              opacity:.9;
+              border-top:5px solid rgba(0,0,0,0);
+              border-left:5px solid rgba(0,0,0,0);
+              border-radius:50px;
+              box-shadow: 0 0 35px rgba(0,92,132,0.5);
+              width:50px;
+              height:50px;
+              margin:0 auto;
+              -moz-animation:spin .7s infinite linear;
+              -webkit-animation:spin .7s infinite linear;
+            }
+
+            .ball1 {
+              background-color: #fff;
+/*              border: 5px solid rgb(0,92,132);*/
+              opacity: .9;
+              border-top: 5px solid rgba(0,0,0,0);
+              border-left: 5px solid rgba(0,0,0,0);
+              border-radius: 50px;
+              box-shadow: 0 0 15px rgb(0,92,132);
+              width: 30px;
+              height: 30px;
+              margin: 0 auto;
+              position: relative;
+              top: -40px;
+              font-family: 'Movistar Headline';
+              color: rgb(0,92,132);
+              text-align: center;
+              font-size: 9px;
+              line-height: 18px;
+              text-indent: -4px;
+/*              -moz-animation:spinoff .7s infinite linear;
+              -webkit-animation:spinoff .7s infinite linear;*/
+            }
+
+            @-moz-keyframes spin {
+              0% { -moz-transform:rotate(0deg); }
+              100% { -moz-transform:rotate(360deg); }
+            }
+            @-moz-keyframes spinoff {
+              0% { -moz-transform:rotate(0deg); }
+              100% { -moz-transform:rotate(-360deg); }
+            }
+            @-webkit-keyframes spin {
+              0% { -webkit-transform:rotate(0deg); }
+              100% { -webkit-transform:rotate(360deg); }
+            }
+            @-webkit-keyframes spinoff {
+              0% { -webkit-transform:rotate(0deg); }
+              100% { -webkit-transform:rotate(-360deg); }
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- Sumario -->
+        <nav id="sumario">
+            <ul>
+                <li class="home"><a href="#home" class="icon fastclickHome">h</a></li>
+<!--                 <li onclick="window.open('mapa/mapa.html','_blank');"><a href="javascript:void(0)" class="icon">l</a></li> -->
+                <li class="location"><a href="javascript:void(0)" class="icon fastclickLocation">l</a></li>
+                <li class="social"><a href="javascript:void(0)" class="icon fastclickSocial">c</a></li>
+                <li class="help"><a href="javascript:void(0)" class="icon fastclickHelp">I</a></li>
+            </ul>
+            <div id="social">
+                <a href="javascript:void(0)" class="icon toTwitter">t</a>
+                <a href="javascript:void(0)" class="icon toFacebook">f</a>
+                <a href="javascript:void(0)" class="icon toMail">m</a>
+            </div>
+            <div class="content"></div>
+        </nav>
+
+        <div id="page-wrap">
+
+            <!-- Cabecera -->
+            <header>
+                <a href="" id="back" class="icon fastclickBack">B</a>
+                <a href="" id="menu" class="icon fastclick">i</a>
+                <h1>La Tienda Movistar</h1>
+            </header>
+
+            <!-- Contenido -->
+            <main>
+
+            </main>
+
+            <!-- Pie de pagina -->
+            <nav id="navbar">
+            </nav>
+
+        </div>
+
+        <div id="mapa">
+            <div class="headerLocation">
+                <a href="javascript:void(0)" class="icon fastclickClose">x</a>
+                <h2>Localiza tu tienda Movistar</h2>
+            </div>
+            <ul>
+              <li id="autonomos" class="fastclickAuton"><a href=""class="icon">a</a></li>
+              <li id="reparacion" class="fastclickRep"><a href=""class="icon">r</a></li>
+            </ul>
+            <div id="controles">
+                <label><input type="checkbox" name="generico" value="generico" class="control todos" checked="checked"/> Todos</label>
+                <label><input type="checkbox" name="autonomo" value="autonomo" class="control autonomo"/> Autonomos</label>
+                <label><input type="checkbox" name="reparacion" value="reparacion" class="control reparacion"/> Reparación</label>
+            </div>
+
+            <div id="map-canvas" class="needsclick"></div>
+        </div>
+
+        <div id="help">
+          <div class="headerHelp">
+              <a href="javascript:void(0)" class="icon fastclickClose2">x</a>
+          </div>
+
+          <div class="flexslider">
+          </div>
+        </div>
+
+
+
+    <!-- VIDEO -->
+    <div class="modalVideo" onClick="">
+        <video id="videoContainer" class="video-js vjs-default-skin" controls width="600" height="420"></video>
+        <div class="sinConexion">
+            Con&eacute;ctate a tu red Wi-Fi para poder ver el v&iacute;deo
+        </div>
+        <div class="closeVideo"></div>
+        <div style="rigth:auto; left:0; background-image: url(../resources/images/icons/iconFull.png);" class="icon-Sumario fullS"></div>
+    </div>
+    <!-- END VIDEO -->
+
+    <!-- FUNCIONALIDAD -->
+    <script type="text/javascript" src="js/libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script type="text/javascript" src="js/apiMap.js?sensor=false"></script>
+    <script type="text/javascript" src="js/markerclusterer_compiled.js"></script>
+    <script type="text/javascript" src="js/mapa.min.js"></script>
+
+    <script type="text/javascript" src="js/libs/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="js/help.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/downloadMgr.js"></script>
+
+    <script type="text/javascript" src="js/libs/fastclick.js"></script>
+    <script type="text/javascript" src="js/libs/iscroll.js"></script>
+    <script type="text/javascript" src="js/appOS.js"></script>
+    <script type="text/javascript" src="js/showMenu.min.js"></script>
+    <script type="text/javascript" src="js/cambioSeccion.min.js"></script>
+
+<script type="text/javascript">
+
+    $('#pre-load-web').on('touchstart', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
+    $(document).ready(function(){
+        // PRECARGA
+          //guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+          var alto=$(window).height();
+          //agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+          $("body").append("<div id='pre-load-web'><div id='imagen-load'><div class='ball'></div><div class='ball1'>0%</div></div></div>");
+          //le damos el alto
+          $("#pre-load-web").css({height:alto+"px"});
+          //esta sera la capa que esta dento de la capa que muestra un gif
+          $("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+        // FIN PRECARGA
+    });
+
+    //PRECARGA
+    $(window).load(function(){
+//      initStorage();
+      $('#sumario, #page-wrap, #mapa, #help').show();
+      // downloadContent();
+      initAyuda();
+      initApp();
+    });
+    // FIN PRECARGA
+
+
+    // document.addEventListener('push-notification', function(event) {
+    //   var notification = event.notification;
+    //   alert(notification.aps.alert);
+    //   pushNotification.setApplicationIconBadgeNumber(0);
+    // });
+
+</script>
+
+
+    </body>
+</html>

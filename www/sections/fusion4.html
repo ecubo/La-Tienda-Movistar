@@ -1,0 +1,194 @@
+<style>
+
+	#paquetes {
+		width: 100%;
+		overflow: auto;
+	}
+
+	#paquetes li {
+		width: 100%;
+		font-family: 'Movistar Headline';
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 40px;
+		text-align: center;
+		color: #fff;
+		padding: 5px 0;
+		background-color: #005c84;
+		margin-bottom: 10px;
+		transition: .3s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	#detalle {
+		height: 60%;
+		padding: 15px;
+		color: #7f7f7f;
+		font-family: 'Movistar Headline';
+		position: absolute;
+		overflow: hidden;
+		width: 100%;
+		border-right: 30px solid #fff;
+	}
+
+	#detalle h3, #detalle h4 {
+		font-weight: normal;
+		font-size: 1em;
+		line-height: 1em;
+		margin-bottom: .5em;
+	}
+
+	#detalle h4 {
+		color: rgb(0,92,132);
+		font-size: .8em;
+	}
+
+	#detalle h5 {
+		font-weight: normal;
+		font-size: .7em;
+		text-indent: -0.5em;
+		margin-left: .5em;
+		line-height: 1.3em;
+	}
+
+	#detalle h5:before {
+		content: "• ";
+	}
+
+	#detalle h5 span {
+		font-weight: bold;
+		color: rgb(190,0,121);
+	}
+
+	.fusion4 .flexslider {
+		width: 100%;
+		height: 100%;
+	}
+
+	.fusion4 .flex-control-paging li a {
+		background: rgba(0,92,132,.4);
+	}
+
+	.fusion4 .flex-control-paging li a.flex-active {
+		background: rgba(0,92,132,.9);
+	}
+
+	.fusion4 .flex-control-nav {
+		top: auto !important;
+		bottom: -15px !important;
+	}
+
+	img.mas {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#paquetes a.icon {
+		float: right;
+		text-align: center;
+		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		height: 40px;
+		transition: .3s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	#paquetes li.active a.icon {
+		transform: rotate(90deg) translate(0,-10px);
+		-webkit-transform: rotate(90deg) translate(0,-10px);
+	}
+
+	#paquetes li.active {
+		margin-bottom: 100%;
+	}
+
+
+</style>
+
+
+<div class="content landing fusion4" data-role="Nuevo Fusión TV">
+	<ul id="paquetes">
+		<li id="mas">Añade mucho más<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+		<li id="adicionales">Líneas Móviles Adicionales<a href="javascript:void(0)" class="icon fastclickLocation">b</a></li>
+	</ul>
+	<div id="detalle">
+		<!-- <h3>Lo más acertado <strong>para toda la familia</strong> con los mejores contenidos para todos los gustos.</h3>
+		<h4>Para disfrutar de las mejores series, cine, programación infantil, documentales...</h4>
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="sections/images/fusion/incluido.jpg" alt="">
+				</li>
+				<li>
+					<img src="sections/images/fusion/todosExperiencias.jpg" alt="">
+				</li>
+				<li>
+					<img src="sections/images/fusion/precioTodos.jpg" alt="">
+				</li>
+			</ul>
+		</div> -->
+
+	</div>
+
+	<div class="maskSlider"></div>
+</div>
+
+<script>
+
+
+
+	$('#paquetes li').on('click touchstart', function() {
+
+		var cual = $(this).attr('id');
+
+		$('.fusion4 .flexslider').remove();
+		$('#detalle').html('');
+		$('#detalle').hide();
+
+		if (!$(this).hasClass('active')) {
+			$('#paquetes li').removeClass('active');
+			$(this).addClass('active');
+			setTimeout(function(){
+				if (cual == 'mas') {
+					$('#detalle').html('<div class="flexslider"><ul class="slides"><li><h4>Si quieres ver el partido del Plus, contrata:</h4><img src="sections/images/fusion/plus.jpg" alt=""></li><li><h4>Y además:</h4><img src="sections/images/fusion/series.jpg" alt=""></li></ul></div>');
+					$('#detalle').css({top:70, height:'50%'});
+				}
+				else if (cual == 'adicionales') {
+					$('#detalle').html('<h3>Añade las líneas móviles de los tuyos y todos tendréis TV en el smartphone.</h3><h4 style="margin-bottom:20px;">Elige una de estas opciones</h4><div class="flexslider" style="height: 60%;"><ul class="slides"><li><img src="sections/images/fusion/dosGB.png" alt=""></li><li><img src="sections/images/fusion/ochocientosMB.png" alt=""></li></ul></div>');
+					$('#detalle').css({top:130, height:'60%'});
+				}
+				else {
+					$('#detalle').html('');
+					$('#detalle').css({top:'200%'});
+				}
+
+				flex();
+				$('#detalle').show();
+			},300);
+
+		}
+		else {
+			$(this).removeClass('active');
+			$('.fusion4 .flexslider').remove();
+		}
+
+	});
+
+	function flex() {
+		$('.fusion4 .flexslider').flexslider({
+	        animation: "slide",
+	        slideshow: false,
+	        animationLoop: false,
+	    });
+
+	    $('.fusion4 .flexslider').on('touchstart', function(e) {
+	    	e.preventDefault();
+	    	e.stopPropagation();
+	    });
+	}
+
+</script>

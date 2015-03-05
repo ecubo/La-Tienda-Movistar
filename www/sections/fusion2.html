@@ -1,0 +1,322 @@
+<div class="content landing fusion2" data-role="Nuevo Fusión TV">
+	<div id="calendario">
+		<div class="semana">
+			<ul id="dias">
+				<li>L</li>
+				<li>M</li>
+				<li>X</li>
+				<li>J</li>
+				<li>V</li>
+				<li>S</li>
+				<li>D</li>
+			</ul>
+		</div>
+		<div class="semana" style="border-top:10px solid #fff;">
+			<ul class="parrilla">
+				<li class="blank l"></li>
+				<li class="blank m"></li>
+				<li class="blank x"></li>
+				<li class="none j"></li>
+				<li class="v" data="dia2">2<span>enero</span></li>
+				<li class="none s"></li>
+				<li class="d" data="dia4">4<span>enero</span></li>
+			</ul>
+			<ul class="parrilla">
+				<li class="none l"></li>
+				<li class="none m"></li>
+				<li class="x" data="dia7">7<span>enero</span></li>
+				<li class="none j"></li>
+				<li class="v" data="dia9">9<span>enero</span></li>
+				<li class="none s"></li>
+				<li class="d" data="dia11">11<span>enero</span></li>
+			</ul>
+			<ul class="parrilla">
+				<li class="none l"></li>
+				<li class="none m"></li>
+				<li class="none x"></li>
+				<li class="none j"></li>
+				<li class="none v"></li>
+				<li class="none s"></li>
+				<li class="d" data="dia18">18<span>enero</span></li>
+			</ul>
+			<ul class="parrilla">
+				<li class="l" data="dia19">19<span>enero</span></li>
+				<li class="none m"></li>
+				<li class="none x"></li>
+				<li class="none j"></li>
+				<li class="v" data="dia23">23<span>enero</span></li>
+				<li class="none s"></li>
+				<li class="d" data="dia25">25<span>enero</span></li>
+			</ul>
+			<ul class="parrilla">
+				<li class="none l"></li>
+				<li class="m" data="dia27">27<span>enero</span></li>
+				<li class="x" data="dia28">28<span>enero</span></li>
+				<li class="none j"></li>
+				<li class="none v"></li>
+				<li class="none s"></li>
+				<li class="blank d"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="programacion">
+		<div class="flexslider">
+
+		</div>
+	</div>
+
+	<div class="maskSlider"></div>
+
+</div>
+
+<script>
+	$('.parrilla li').on('click touchstart', function(){
+		if (!$(this).hasClass('none') && !$(this).hasClass('blank')) {
+			var img = $(this).attr('data');
+
+			$('.programacion').addClass('active');
+
+			$('.parrilla li').css({'background-color':'#ccdee6'});
+			$('.parrilla li.blank').css({'background-color':'#fff'});
+			$(this).css({'background-color':'rgb(0,92,132)'});
+
+			$('#calendario').css({'background-image': 'url(sections/images/fusion/'+img+'.jpg)'});
+			$('#calendario li.none').css({'background-color': 'rgba(255,255,255,.5)'});
+
+			setTimeout(function(){
+
+				$('.fusion2 .flexslider').remove();
+				$('.programacion').html('<div class="flexslider"></div>');
+
+				if (img == 'dia2') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/transformers.jpg" alt=""><h3>2 <span>enero</span></h3><h4>TRANSFORMERS, LA ERA DE LA EXTINCIÓN</h4></li><li><img src="sections/images/fusion/infiltrados.jpg" alt=""><h3>2 <span>enero</span></h3><h4>INFILTRADOS EN LA UNIVERSIDAD</h4></li></ul>');
+				}
+				else if (img == 'dia4') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/partido1.jpg" alt=""><h3>4 <span>enero</span></h3><h4>VALENCIA <br/><span>VS.</span> REAL MADRID</h4></li></ul>');
+				}
+				else if (img == 'dia7') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/mentalista.jpg" alt=""><h3>7 <span>enero</span></h3><h4>EL MENTALISTA T7 <br/><span>(estreno)</span></h4></li><li><img src="sections/images/fusion/major.jpg" alt=""><h3>7 <span>enero</span></h3><h4>MAJOR CRIMES <br/><span>(nuevos episodios)</span></h4></li></ul>');
+				}
+				else if (img == 'dia9') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/corredor.jpg" alt=""><h3>9 <span>enero</span></h3><h4>EL CORREDOR <br/>DEL LABERINTO</h4></li></ul>');
+				}
+				else if (img == 'dia11') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/partido2.jpg" alt=""><h3>11 <span>enero</span></h3><h4>FC BARCELONA <br/><span>VS.</span> ATLETICO MADRID</h4></li></ul>');
+				}
+				else if (img == 'dia18') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/partido3.jpg" alt=""><h3>18 <span>enero</span></h3><h4>VALENCIA <br/><span>VS.</span> MÁLAGA</h4></li></ul>');
+				}
+				else if (img == 'dia19') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/open.jpg" alt=""><h3>19 <span>enero</span> - 1 <span>febrero</span></h3><h4>OPEN DE AUSTRALIA 2015 <br/><span>EN DIRECTO Y EN EXCLUSIVA</span></h4></li></ul>');
+				}
+				else if (img == 'dia23') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/isla.jpg" alt=""><h3>23 <span>enero</span></h3><h4>LA ISLA MÍNIMA</h4></li></ul>');
+				}
+				else if (img == 'dia25') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/partido4.jpg" alt=""><h3>25 <span>enero</span></h3><h4>VALENCIA <br/><span>VS.</span> SEVILLA</h4></li></ul>');
+				}
+				else if (img == 'dia27') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/wife.jpg" alt=""><h3>27 <span>enero</span></h3><h4>THE GOOD WIFE <br/><span>(Temporada 6)</span></h4></li></ul>');
+				}
+				else if (img == 'dia28') {
+					$('.fusion2 .flexslider').html('<ul class="slides"><li><img src="sections/images/fusion/empire.jpg" alt=""><h3>28 <span>enero</span></h3><h4>EMPIRE <br/><span>(estreno)</span></h4></li></ul>');
+				}
+				else {
+					$('.fusion2 .flexslider').html('');
+				}
+
+				flex();
+				$('.programacion').removeClass('active');
+
+			}, 500);
+
+		}
+	});
+
+	function flex() {
+		$('.fusion2 .flexslider').flexslider({
+	        animation: "slide",
+	        slideshow: false,
+	        animationLoop: false,
+	    });
+
+	    $('.fusion2 .flexslider').on('touchstart', function(e) {
+	    	e.preventDefault();
+	    	e.stopPropagation();
+	    });
+	}
+
+
+</script>
+
+<style>
+	.fusion2 {
+		background-image: url(sections/images/fusion3.jpg);
+	}
+
+	#calendario {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-color: #fff;
+		transition: background .5s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	#calendario ul {
+		position: relative;
+		height: 44px;
+	}
+
+	#calendario li {
+		float: left;
+		font-family: 'Movistar Headline';
+		font-weight: normal;
+		color:#fff;
+		text-align: center;
+		/*14,28571428571429*/
+		width: 14.28571428571429%;
+		padding: 0 5px;
+		position: absolute;
+		height: 44px;
+		background-color: rgba(0,92,132,1);
+/*		border-radius: 10px;*/
+		border: 2px solid #fff;
+	}
+
+	#calendario li.none {
+		background-color: rgba(0,92,132,.5);
+	}
+
+	#calendario li.blank {
+		background-color: #fff;
+	}
+
+	#calendario ul#dias {
+		height: 28px;
+		background-color: #ccdee6;
+	}
+
+	#calendario ul#dias li {
+		font-size: 16px;
+		background-color: transparent;
+		color: rgba(0,92,132,1);
+		height: 22px;
+		position: inherit;
+		line-height: 26px;
+		border: none;
+	}
+
+	#calendario li span {
+		clear: both;
+		display: block;
+		font-weight: bold;
+		font-size: 10px;
+		line-height: .5em;
+	}
+
+	#calendario li.l {
+		left: 0%;
+	}
+
+	#calendario li.m {
+		left: 14.28571428571429%;
+	}
+
+	#calendario li.x {
+		left: 28.57142857142858%;
+	}
+
+	#calendario li.j {
+		left: 42.85714285714287%;
+	}
+
+	#calendario li.v {
+		left: 57.14285714285716%;
+	}
+
+	#calendario li.s {
+		left: 71.42857142857145%;
+	}
+
+	#calendario li.d {
+		left: 85.71428571428574%;
+	}
+
+	.programacion {
+		width: 100%;
+		height: 35%;
+		overflow: hidden;
+		margin-top: 20px;
+		transition: .5s;
+		transition-timing-function: ease-out-cubic;
+		-webkit-perspective: 1000;
+	}
+
+	.programacion.active {
+		transform: translate3d(0,200%,0);;
+		-webkit-transform: translate3d(0,200%,0);;
+	}
+
+	.fusion2 .flex-control-nav {
+		bottom: 0 !important;
+		top: auto !important;
+	}
+
+	.fusion2 .flexslider {
+		background-color: transparent;
+	}
+
+	.fusion2 .flexslider, .fusion2 .flex-viewport, .fusion2 .flexslider .slides {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.fusion2 .slides > li {
+		position: relative;
+	}
+
+	.fusion2 .slides > li h3,
+	.fusion2 .slides > li h4 {
+		position: absolute;
+		top:0;
+		font-family: 'Movistar Headline';
+		font-weight: normal;
+		background-color: rgb(0,92,132);
+		color: #fff;
+		padding: 0 10px;
+		font-size: 1em;
+		line-height: 1.5em;
+		width: 100%;
+	}
+
+	.fusion2 .slides > li h3 span {
+		font-size: .6em;
+	}
+
+	.fusion2 .slides > li h4 {
+		top: 0;
+		right: 0;
+		font-size: .5em;
+		width: 50%;
+		text-align: right;
+		background-color: transparent;
+		line-height: 1em;
+		padding: 0.7em 10px;
+	}
+
+	.fusion2 .slides > li h4 span {
+		font-size: .5em;
+	}
+
+	.fusion2 .flex-control-paging li a {
+		background: rgba(0,92,132,.4);
+	}
+
+	.fusion2 .flex-control-paging li a.flex-active {
+		background: rgba(0,92,132,.9);
+	}
+
+</style>

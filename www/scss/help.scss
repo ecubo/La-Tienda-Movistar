@@ -1,0 +1,54 @@
+#help {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100;
+	background-color: #fff;
+	-webkit-transition: 200ms;
+	transition: 200ms;
+	-webkit-perspective: 1000px;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 100%, 0);
+	transform: translate3d(0, 100%, 0);
+	display: none;
+
+	&.active {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	.headerHelp {
+		width: 100%;
+		height: 50px;
+		background-color: $azul;
+
+		#ios & {
+			height: 65px;
+			padding-top: 15px;
+		}
+
+		a {
+			position: absolute;
+			z-index: 200;
+		}
+	}
+}
+
+.flexslider .slides img {
+	&.horizontal {
+		display: none;
+	}
+
+	@media all and (orientation: landscape) {
+		&.horizontal {
+			display: block;
+		}
+		&.vertical {
+			display: none;
+		}
+	}
+
+}

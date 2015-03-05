@@ -1,0 +1,14 @@
+a.icon.shotShare {
+	height: 50px;
+	position: absolute;
+	bottom: 82px;
+	left: 33px;
+	color: rgb(0,92,132);
+}
+
+a.icon.shotShare:after {
+	content: "Compártelo";
+	font-family: 'Movistar Text';
+	font-size: 16px;
+	position: absolute;
+}
